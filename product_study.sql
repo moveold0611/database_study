@@ -52,9 +52,11 @@ select
 	*
 from
 	registered_product_tb rpt
-    left outer join product_color_tb pct on(pct.product_color_id = rpt.product_color_id)
+    left outer join product_color_tb pct on(pct.product_color_id = rpt.product_color_id) # join 두개의 테이블을 합친다. on = 조건
 where
 	pct.color_name = 'red';
+# PRIMARY KEY를 기준으로 join함
+
 
 
 select
@@ -63,3 +65,5 @@ from
 	product_color_tb
 where
 	color_name = 'red';
+    
+
